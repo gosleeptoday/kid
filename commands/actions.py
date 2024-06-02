@@ -12,7 +12,7 @@ async def user_actions_buttons(message: types.Message, state: FSMContext):
         await message.reply("Какие занятия вас интересуют?", reply_markup=first_actions)
         await state.set_state(UserActionState.Select)
     else:
-        await message.answer("Данный бот предназначен для удобной записи на пробные занятия в студию открытий «Дело в детях».\nКонтакт для связи:\nКристина Tg: @Kristina_delovdetyah Телефон: +79168103627", reply_markup=cancel_k)
+        await message.answer("Данный бот предназначен для удобной записи на пробные занятия в студию детских открытий «Дело в детях».\nКонтакт для связи:\nКристина Tg: @Kristina_delovdetyah Телефон: +79168103627", reply_markup=cancel_k)
 
 @commands_router.callback_query(UserActionState.Select)
 async def user_actions_buttons(call: types.CallbackQuery, state: FSMContext):
